@@ -1,31 +1,41 @@
-.header 
+.header
     grid-area: header
-    background-color: red
+    background-color: white
+    border-bottom: 40px solid #2f2f2f    
 
-.footer 
+.footer
     grid-area: footer
-    background-color: green
+    background-color: #2f2f2f
+    color: white
 
 .body
     grid-area: main
-    background-color: blue
+    background-color: white
 
-.sidenav 
+.sidenav
     grid-area: navigation
     background-color: yellow
+    background-color: #f2f2f2
+    box-shadow: 4px 0px 4px rgba(0,0,0,.12)
 
 .page
     display: grid
     grid-template-areas: "header header" "navigation main" "footer footer"
-    grid-template-columns: 150px 1fr
-    grid-template-rows: 90px 1fr 50px
+    grid-template-columns: 220px 1fr
+    grid-template-rows: 90px 1fr 30px
     min-height: 100vh
 
-
-@media screen and (max-width: 600px)
-    
+@media screen and (max-width: 600px)    
 	.page
-		grid-template-areas: "header" "navigation" "main" "footer"
+		grid-template-areas: "header" "main" "footer" 
 		grid-template-columns: 100%
-		grid-template-rows: 100px 50px 1fr 50px
+		grid-template-rows: 100px 1fr 30px
 
+@media screen and (max-width: 600px)       
+    .sidenav
+        display: none
+
+    // .page--navopen
+    //     grid-template-areas: "header" "navigation" "footer"
+    //     grid-template-columns: 100%
+    //     grid-template-rows: 100px 1fr 30px
