@@ -7,8 +7,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { BiglistsearchComponent } from './biglistsearch/biglistsearch.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { ThingsService } from './things.service';
+import { BigListPipePipe } from './biglistsearch/big-list-pipe.pipe';
 
 
 @NgModule({
@@ -16,12 +17,13 @@ import { ThingsService } from './things.service';
     AppComponent,
     HeaderComponent,
     SidenavComponent,
-    BiglistsearchComponent
+    BiglistsearchComponent,
+    BigListPipePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    FormsModule
   ],
   providers: [ThingsService],
   bootstrap: [AppComponent]

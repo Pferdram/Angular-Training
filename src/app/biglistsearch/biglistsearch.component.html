@@ -1,24 +1,11 @@
 <div class="biglist">
 
-    <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
-
-        <div>
-            <button type="submit" [disabled]="searchForm.pristine" class="btn btn-success">Save</button> &nbsp;
-        </div>
-
-        <!-- search Detail Controls -->
-        <div class="form-group">
-            <label class="center-block">Name:
-                <input class="form-control" formControlName="name">
-            </label>
-        </div>
-
-    </form>
-
+    <input [(ngModel)]="filter" >
+    
     <ul>
         <li *ngFor="let thing of things">
             <div class="card">
-                <div class="card__item">id: {{thing.id}}</div>
+                <div class="card__item">id: {{thing.id.slice(1, 4)}}</div>
                 <div class="card__item">name: {{thing.name}}</div>
                 <div class="card__item">height: {{thing.height}}</div>
                 <div class="card__item">width: {{thing.width}}</div>
