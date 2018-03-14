@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { BiglistsearchComponent } from './biglistsearch/biglistsearch.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ThingsService } from './things.service';
 
 
 @NgModule({
@@ -18,9 +20,10 @@ import { BiglistsearchComponent } from './biglistsearch/biglistsearch.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ThingsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
